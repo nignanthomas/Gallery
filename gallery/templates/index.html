@@ -17,8 +17,10 @@
   <div class="masonry">
     {% for image in all_images %}
     <div class="item">
-      <img class="img-fluid rounded" src="{{image.image_path.url}}" alt="">
-      <!-- <h6 class="clrd-font" >{{image.image_name}}</h6> -->
+      <img class="img-fluid rounded image" src="{{image.image_path.url}}" alt="Click To Expand">
+      <div class="description">
+        <h6 class="clrd-font text" >{{image.image_name}}</h6>
+      </div>
     </div>
     {% endfor %}
   </div>

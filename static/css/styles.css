@@ -22,6 +22,57 @@
   margin: 0 0 1em;
 }
 
+
+/* On Hover Fade and Display Description */
+.item {
+    position: relative;
+    /* width: 50%; */
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.description {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.item:hover .image {
+  opacity: 0.5;
+  cursor: zoom-in;
+}
+
+.item:hover .description {
+  opacity: 1;
+}
+
+.text {
+  background-color: purple;
+  border-radius: 20px;
+  color: black;
+  /* font-size: 16px; */
+  padding: 5px 5px;
+}
+
+
+
+
+
+
+
+
 /* Masonry on large screens */
 @media only screen and (min-width: 1024px) {
   .masonry {
