@@ -32,6 +32,7 @@ class Image(models.Model):
     image_path = models.ImageField(upload_to = 'pictures/')
     image_location = models.ForeignKey(Location, on_delete=models.CASCADE)
     image_category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    time = models.DateTimeField(auto_now_add = True,)
 
     def __str__(self):
         return self.image_name
