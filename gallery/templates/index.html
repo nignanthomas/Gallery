@@ -2,5 +2,26 @@
 
 
 {% block content %}
-  <h1 class='text-center'>Gallery</h1>
+
+
+
+
+<div class="container">
+  <div class="row">
+    {% if all_images%}
+    {% else %}
+      <h2> Found 0 images for the search term {{message}}</h2>
+    {% endif %}
+  </div>
+
+  <div class="d-flex flex-row flex-wrap">
+    {% for image in all_images %}
+    <div class="col-xs col-sm-6 col-md-3 col-lg-4 d-flex flex-column">
+      <img class="img-fluid rounded" src="{{image.image_path.url}}" alt="">
+      <h6 class="clrd-font" >{{image.image_name}}</h6>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
 {% endblock %}
