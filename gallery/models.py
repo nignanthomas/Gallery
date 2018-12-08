@@ -49,6 +49,12 @@ class Image(models.Model):
         return search_result
 
     @classmethod
+    def filter_location(cls,location):
+        filter_loc = cls.objects.filter(image_location__location_name__icontains=location)
+        return filter_loc
+
+
+    @classmethod
     def get_image_by_id(cls,input_id):
         image_got = cls.objects.get(id=input_id)
         return image_got
@@ -67,7 +73,3 @@ class Image(models.Model):
     #     fetched_object = Image.objects.filter(image_name=current_value).update(image_name=new_value)
     #     return fetched_object
     #
-    # @classmethod
-    # def filter_by_location(cls,location):
-    #     filtered = cls.objects.filter(image_location__location_name__icontains=location)
-    #     return filtered
