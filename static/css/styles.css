@@ -1,6 +1,7 @@
 body {
   font-family: 'Source Code Pro', monospace;
   /* box-sizing: border-box; */
+  background-color: #f7f7f7;
 }
 
 .navbar {
@@ -36,6 +37,9 @@ body {
 
 div .header{
   color: lightgrey;
+  font-family: 'Poiret One', cursive;
+  font-size: 150%;
+  font-weight: bold;
 }
 
 
@@ -95,12 +99,12 @@ form.search-form::after {
   margin: 1em auto;
   /* max-width: 768px; */
   column-gap: 1em;
-  background-color: white;
+  /* background-color: white; */
 }
 
 /* The Masonry Brick */
 .item {
-  background: #fff;
+  /* background: lightgrey; */
   /* padding: 0.5em; */
   margin: 0 0 1em;
 }
