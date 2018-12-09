@@ -106,16 +106,12 @@ form.search-form::after {
 .item {
   /* background: lightgrey; */
   /* padding: 0.5em; */
+  position: relative;
   margin: 0 0 1em;
 }
 
 
 /* On Hover Fade and Display Description */
-.item {
-    position: relative;
-    /* width: 50%; */
-}
-
 .image {
   opacity: 1;
   display: block;
@@ -152,10 +148,6 @@ form.search-form::after {
   /* font-size: 16px; */
   padding: 5px 5px;
 }
-
-
-
-
 
 
 

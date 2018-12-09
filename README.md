@@ -4,6 +4,11 @@ A personal gallery application to display great photos by categories and locatio
 ### Author
 [nignanthomas](https://github.com/nignanthomas)
 
+### Screenshots
+<img src="/static/images/django-gallery.PNG">
+
+<img src="/static/images/django-gallery-2.PNG">
+
 ### User Stories
 + [x] View different photos that interest me.
 + [x] Click on a single photo to expand it and also view the details of the photo. The photo details must appear on a modal within the same route as the main page.
