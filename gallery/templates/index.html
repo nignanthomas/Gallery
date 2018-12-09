@@ -31,7 +31,7 @@ function copyLink() {
       <a href="{{image.image_path.url}}" data-fancybox data-caption='<a href="{{image.image_path.url}}"><h6>{{image.image_name}}</h6></a>
                                                                     <p>{{image.image_description}}</p>
                                                                     <p>Location: {{image.image_location}} / Category: {{image.image_category}}</p>
-                                                                    <button class="rounded btn-primary" onclick="copyLink()" >Copy Link</button>'>
+                                                                    <button class="rounded btn-primary" onclick="copyLink()" >📋Copy Link</button>'>                                                                    
         <img class="img-fluid rounded image" src="{{image.image_path.url}}" alt="{{image.image_name}}">
       </a>
       <input type="text" id="imagelink" class="invisible form-control input-sm d-none" value="{{image.image_path.url}}">
