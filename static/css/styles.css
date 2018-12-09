@@ -1,6 +1,7 @@
-/* html {
-  box-sizing: border-box;
-} */
+body {
+  font-family: 'Source Code Pro', monospace;
+  /* box-sizing: border-box; */
+}
 
 .navbar {
   background-color: transparent !important;
