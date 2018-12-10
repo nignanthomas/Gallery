@@ -24,10 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 MODE=config("MODE", default="dev")
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7=-yyfwe+%v4n2(l@#3t&c6+q2kkf(^2xa1fg^7c-zw-_ag1si'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 DEBUG = config('DEBUG', default=False, cast=bool)
 # development
 if config('MODE')=="dev":
@@ -105,14 +105,14 @@ WSGI_APPLICATION = 'photos.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gallery',
-        'USER' : 'thomas',
-        'PASSWORD' : 'psqltoto29'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'gallery',
+#         'USER' : 'thomas',
+#         'PASSWORD' : 'psqltoto29'
+#     }
+# }
 
 
 # Password validation
@@ -153,7 +153,7 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'static'),
 ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
