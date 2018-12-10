@@ -49,10 +49,14 @@
 <div class="text-center header mt-5 animated shake">
   <h1 style="text-decoration: underline overline">The Django Unchained Gallery</h1>
   <p>Check out my gallery photos and feel free to Download!</p>
-  <form class="w-100" action="{% url 'search_results' %}">
+  <form class="w-100 mt-5" action="{% url 'search_results' %}">
     <input class="w-50" type="search" placeholder="search_By_Category ..." name="searchcat" aria-label="Search">
     <button class="btn rounded p-0" type="submit" style="margin-left: -50px; margin-bottom: 15px;"><img src="https://www.freeiconspng.com/uploads/search-icon-png-27.png" alt="" width="32px" height="32px"></button>
   </form>
+  <div class="suggested">
+    <p>Suggested: <a style="color:white;" href="{% url 'page_category' 'Beauty' %}">beauty</a>; <a style="color:white;" href="{% url 'page_location' 'Japan' %}">japan</a>; <a style="color:white;" href="{% url 'page_category' 'Animals' %}">animals</a> ...</p>
+
+  </div>
 </div>
 <!-- <div class="navpic"> -->
   <!-- <form class="form-inline my-2 my-lg-0 search-form" action="{% url 'search_results' %}">
