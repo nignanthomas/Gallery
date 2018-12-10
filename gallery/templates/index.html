@@ -11,6 +11,7 @@ function copyLink() {
   document.execCommand("copy");
   alert("Link copied to clipboard: " + copyText.value);
 }
+
 </script>
 
 
@@ -21,18 +22,18 @@ function copyLink() {
   <div class="row">
     {% if all_images%}
     {% else %}
-      <h2> Found 0 images for the search term {{message}}</h2>
+      <h2>{{message}}</h2>
     {% endif %}
   </div>
 
-  <div class="masonry">
+  <div class="masonry text-center">
     {% for image in all_images %}
-    <div class="item  animated zoomIn">
-      <a href="{{image.image_path.url}}" data-fancybox data-caption='<a href="{{image.image_path.url}}"><h6>{{image.image_name}}</h6></a>
+    <div class="item animated zoomIn">
+      <a href="{{image.image_path.url}}" data-fancybox="images" data-buttons='["zoom","slideShow","fullScreen","thumbs","share","close"]' data-caption='<a href="{{image.image_path.url}}"><h6>{{image.image_name}}</h6></a>
                                                                     <p>{{image.image_description}}</p>
                                                                     <p>Location: {{image.image_location}} / Category: {{image.image_category}}</p>
                                                                     <button class="rounded btn-primary" onclick="copyLink()" >📋Copy Link</button>'>
-        <img class="img-fluid rounded image" src="{{image.image_path.url}}" alt="{{image.image_name}}">
+        <img class="rounded image" src="{{image.image_path.url}}" alt="{{image.image_name}}">
       </a>
       <input type="text" id="imagelink" class="invisible form-control input-sm d-none" value="{{image.image_path.url}}">
       <!-- <img class="img-fluid rounded image" src="{{image.image_path.url}}" alt="{{image.image_name}}"> -->
