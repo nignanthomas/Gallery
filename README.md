@@ -1,4 +1,4 @@
-# The Django Unchained Gallery
+# The Django Unchained Gallery  https://gallery-unchained.herokuapp.com/
 A personal gallery application to display great photos by categories and locations from around the world.
 
 ### Author
@@ -31,6 +31,7 @@ A personal gallery application to display great photos by categories and locatio
       * Heroku     
 
 ### Live Link
+https://gallery-unchained.herokuapp.com/
 
 
 ### Installation Requirements
